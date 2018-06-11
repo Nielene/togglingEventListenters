@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<style>
+		#box{
+			height: 400px;
+			width: 400px;
+			background-color: red;
+		}
+	</style>
+
+<div id="box">
+	<input id= "textH1" type="button" value="ON" >
+</div>
+	
+	<script>
+	var text = document.getElementById("textH1");
+	function changeText(){
+		if(text.value =="ON"){
+			text.value = "OFF";
+		}else{
+			text.value = "ON";
+		}
+	}
+		//Event listener:
+	document.getElementById('textH1').addEventListener('click', changeText);
+	
+	function changeColor(){
+		if(text.value =="ON"){
+			var color = document.getElementById("box");
+			if(color.style.backgroundColor =='green'){
+				color.style.backgroundColor = 'red';
+			}else{
+				color.style.backgroundColor = 'green';
+			}
+			}
+		}
+		}else{
+			color.style.backgroundColor = 'red';
+	}
+
+	document.getElementById('box').addEventListener('mouseenter', changeColor);
+	document.getElementById('box').addEventListener('mouseleave', changeColor);
+
+
+	
+
+		// if (text.value =="ON"){
+		//document.body.style.backgroundColor = "green";
+		// }else if (text.value =="ON"){
+		// 	document.body.style.backgroundColor = "red";
+		// }else if (text.value =="OFF"){
+		// 	document.body.style.backgroundColor = "green";
+		// }else{
+		// 	document.body.style.backgroundColor = "green";
+		// }
+
+	</script>
+</body>
+</html>
