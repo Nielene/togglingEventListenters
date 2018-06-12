@@ -18,35 +18,60 @@
 </div>
 	
 	<script>
-	var text = document.getElementById("textH1");
-	function changeText(){
-		if(text.value =="ON"){
-			text.value = "OFF";
-		}else{
-			text.value = "ON";
-		}
-	}
-		//Event listener:
+			//Event listener:
 	document.getElementById('textH1').addEventListener('click', changeText);
-	
-	function changeColor(){
-		if(text.value =="ON"){
-			var color = document.getElementById("box");
-			if(color.style.backgroundColor =='green'){
-				color.style.backgroundColor = 'red';
+
+	var text = document.getElementById("textH1");
+		function changeText(){
+			if(text.value =="ON"){
+				text.value = "OFF";
 			}else{
+				text.value = "ON";
+			}
+		}     
+	
+	document.getElementById('box').addEventListener('mouseenter', changeColor1);
+	document.getElementById('box').addEventListener('mouseleave', changeColor2);
+
+	var color = document.getElementById("box");
+		function changeColor1(){
+			if (text.value=='ON') {
 				color.style.backgroundColor = 'green';
 			}
+		}
+
+		function changeColor2(){
+			if (text.value=='ON'){
+				color.style.backgroundColor = 'red';
+			}else{
+				color.style.backgroundColor = 'red';
 			}
 		}
-		}else{
-			color.style.backgroundColor = 'red';
-	}
-
-	document.getElementById('box').addEventListener('mouseenter', changeColor);
-	document.getElementById('box').addEventListener('mouseleave', changeColor);
 
 
+			// if (text.value=='ON' && color.style.backgroundColor = 'green') {
+			// 	color.style.backgroundColor = 'red';
+			// }else if (text.value=='ON' && color.style.backgroundColor = 'red'){
+			// 	color.style.backgroundColor = 'green';
+			// }else{
+			// 	color.style.backgroundColor = 'red';
+			// }
+
+			// if(color.style.backgroundColor =='green'){
+			// 	color.style.backgroundColor = 'red';
+			// }else{
+			// 	color.style.backgroundColor = 'green';
+			// }
+		
+	
+	// function condition(){
+	// 	// if(text.value =="ON"){
+	// 	// 	color();
+	// 	// }else 
+	// 	if(text.value ="OFF"){
+	// 		color.style.backgroundColor = 'red';
+	// 		}
+	// }
 	
 
 		// if (text.value =="ON"){
